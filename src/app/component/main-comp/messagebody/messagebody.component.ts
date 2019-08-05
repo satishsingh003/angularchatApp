@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-messagebody',
   templateUrl: './messagebody.component.html',
