@@ -6,10 +6,11 @@ import { Injectable } from '@angular/core';
 export class MessageServiceService {
   private messageArray: any = [];
   private messageTxt: any;
-
+  private today: number;
   constructor() { }
   sendMessage(message: string) {
-    this.messageArray.push(message);
+    this.today=Date.now();
+    this.messageArray.push( {message:message,currtime:this.today});
     console.log("this.messageArray", this.messageArray);
 
   }

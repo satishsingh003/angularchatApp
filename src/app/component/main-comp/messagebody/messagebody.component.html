@@ -1,16 +1,14 @@
-Chat Message Body
-
 <div *ngFor="let item of messageArray;let i=index">
         <div class="container" *ngIf="i%2==0">
             <img src="../../../../assets/149452.svg" alt="Avatar" style="width:100%;">
-            <p>{{item}}</p>
-            <span class="time-right">11:00</span>
+            <p>{{item.message}}</p>
+            <span class="time-right"> {{item.currtime| date:'shortTime'}}</span>
           </div>
           
           <div class="container darker" *ngIf="i%2!=0">
             <img src="../../../../assets/149452.svg" alt="Avatar" class="right" style="width:100%;">
-            <p>{{item}}</p>
-            <span class="time-left">11:01</span>
+            <p>{{item.message}}</p>
+            <span class="time-left"> {{item.currtime| date:'shortTime'}}</span>
           </div>
 </div>
 

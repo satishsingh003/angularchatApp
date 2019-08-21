@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
   sendMessage(messagebox){
     console.log("messagebox",messagebox)
     this.MessageServiceService.sendMessage(this.messagebox);
+    this.messagebox="";
   }
   ngOnInit() {
   }
