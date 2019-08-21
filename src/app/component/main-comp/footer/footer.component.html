@@ -1,6 +1,6 @@
 <footer class="footerclass">
-    <input type="text" name="messagebox" placeholder="Enter your message here">
-    <button type="button" class="btn btn-default btn-sm" >
+    <input type="text" name="messagebox" placeholder="Enter your message here" [(ngModel)]="messagebox" >
+    <button type="button" class="btn btn-default btn-sm" (click)="sendMessage(messagebox)" >
           <span class="glyphicon glyphicon-send"></span> 
     </button>
 </footer>

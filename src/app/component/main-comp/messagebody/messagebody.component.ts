@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import  { MessageServiceService } from '../../../services/message-service.service';
 
 @Component({
   selector: 'app-messagebody',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messagebody.component.css']
 })
 export class MessagebodyComponent implements OnInit {
+  private messageArray: any = [];
 
-  constructor() { 
-
+  constructor(private MessageServiceService: MessageServiceService) { 
+     this.messageArray=this.MessageServiceService.getMessages();
   }
   ngOnInit() {
     
