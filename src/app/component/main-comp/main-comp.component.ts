@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  AfterViewChecked, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { HeaderComponent }      from './header/header.component'
 import { FooterComponent }      from './footer/footer.component'
 import { MessagebodyComponent }      from './messagebody/messagebody.component'
@@ -7,11 +7,24 @@ import { MessagebodyComponent }      from './messagebody/messagebody.component'
   templateUrl: './main-comp.component.html',
   styleUrls: ['./main-comp.component.css']
 })
-export class MainCompComponent implements OnInit {
-
+export class MainCompComponent implements OnInit,AfterViewChecked {
+  opts={};
+  @ViewChild('scrollMe',this.opts)private myScrollContainer: ElementRef;
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { 
+    this.scrollToBottom();
+}
+
+ngAfterViewChecked() {        
+    this.scrollToBottom();        
+} 
+
+scrollToBottom(): void {
+    try {
+        this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+    } catch(err) { }                 
+}
+
 
 }

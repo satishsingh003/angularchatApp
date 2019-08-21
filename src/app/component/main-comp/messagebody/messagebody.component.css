@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
- 
+  max-width: 800px; 
   padding: 0 20px;
 }
 
@@ -46,7 +46,4 @@ body {
 .time-left {
   float: left;
   color: #999;
-}
-.messagebody{
-    background-color: #ccc
 }
