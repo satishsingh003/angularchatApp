@@ -1,4 +1,4 @@
-<div *ngFor="let item of messageArray;let i=index">
+<div *ngFor="let item of messageArray;let i=index" class="messagebody">
         <div class="container" *ngIf="i%2==0">
             <img src="../../../../assets/149452.svg" alt="Avatar" style="width:100%;">
             <p>{{item.message}}</p>
