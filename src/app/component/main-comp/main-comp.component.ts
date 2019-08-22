@@ -8,8 +8,9 @@ import { MessagebodyComponent }      from './messagebody/messagebody.component'
   styleUrls: ['./main-comp.component.css']
 })
 export class MainCompComponent implements OnInit,AfterViewChecked {
-  opts={};
-  @ViewChild('scrollMe',this.opts)private myScrollContainer: ElementRef;
+
+  @ViewChild('scrollMe',{read:ElementRef,static:false}) 
+   myScrollContainer: ElementRef;
   constructor() { }
 
   ngOnInit() { 
