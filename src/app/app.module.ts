@@ -12,6 +12,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { environment } from '../environments/environment';
     HeaderComponent,
     FooterComponent,
     MessagebodyComponent,
-    MainCompComponent
+    MainCompComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
