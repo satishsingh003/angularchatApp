@@ -15,7 +15,8 @@ export class MainCompComponent implements OnInit,AfterViewChecked {
 
   ngOnInit() { 
     this.scrollToBottom();
-}
+    console.log("check for route ID :phone nu")
+  }
 
 ngAfterViewChecked() {        
     this.scrollToBottom();        

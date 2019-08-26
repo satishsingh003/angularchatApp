@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, ActivatedRoute, Params, Data } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-  loginApp(messagebox) {
-    console.log("messagebox",messagebox)
+  constructor(  private route: ActivatedRoute,
+    private router: Router) { }
+  loginApp(phno) {
+    //console.log("messagebox",phno);
+    this.router.navigate(['main', { id: phno }]);
   }
   ngOnInit() {
   }
