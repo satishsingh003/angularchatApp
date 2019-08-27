@@ -20,14 +20,15 @@ export class MessageServiceService {
 
   // }
   getMessages() {
-    this.route.params.subscribe(params => {
-      // this.id = +params['id']; // (+) converts string 'id' to a number
-      console.log("params", params['id']);
-      this.PhoneNo = params['id'];
+    // this.route.params.subscribe(params => {
+    //   // this.id = +params['id']; // (+) converts string 'id' to a number
+    //   console.log("params", params['id']);
+    //   this.PhoneNo = params['id'];
 
-      // In a real app: dispatch action to load the details here.
-    });
-    return this.firestore.collection('messages').snapshotChanges();
+    //   // In a real app: dispatch action to load the details here.
+    // });
+    return this.firestore.collection('messages',ref => 
+    ref.orderBy('currtime','asc')).snapshotChanges();
   }
   sendMessage(message: any,phoneNo: number ){
     this.today=Date.now();

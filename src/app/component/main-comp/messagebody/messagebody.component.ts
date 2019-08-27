@@ -18,9 +18,17 @@ export class MessagebodyComponent implements OnInit {
       // In a real app: dispatch action to load the details here.
     });
     this.MessageServiceService.getMessages().subscribe(data => {
+      console.log("data",data);
+
       this.messageArray = data.map(e => {
+        let messages =e.payload.doc.data();
+       
+      //   messages.sort(function(a, b){
+      //     return a.currtime - b.currtime;
+      // });
+       console.log("Message",messages);
         return {
-          ...e.payload.doc.data()
+          ...messages
         } as Message;
       })
     });
