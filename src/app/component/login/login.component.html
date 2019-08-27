@@ -1,12 +1,14 @@
-<form (ngSubmit)="loginApp(mobileNumber)">
-    <div class="container">
-        <label for="uname"><b>Login Using Mobile Number</b></label>
-        <input type="text" placeholder="Enter Mobile Number" name="mobile" [(ngModel)]="mobileNumber" required>
-        <button type="submit">Login</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-    </div>
-
-
-</form>
+<div class="container">
+        <div class="logo"><img src="./../../../assets/favicon1.ico"></div>
+        <div class="login-item">
+          <form  (ngSubmit)="loginApp(mobileNumber)" class="form form-login">
+            <div class="form-field">
+              <input id="login-username" type="number" placeholder="Enter Mobile Number" autocomplete="off" name="mobile"
+              [(ngModel)]="mobileNumber" required class="form-input" >
+            </div>
+            <div class="form-field">
+            <input type="submit" value="Let's Hangout">
+            </div>
+          </form>
+        </div>
+</div>
