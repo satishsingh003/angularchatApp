@@ -31,8 +31,10 @@ export class MessageServiceService {
     ref.orderBy('currtime','asc')).snapshotChanges();
   }
   sendMessage(message: any,phoneNo: number ){
+    const newId =  this.firestore.createId();
+    
     this.today=Date.now();
-    this.firestore.collection('messages').add({message:message,currtime:this.today, messagePhoneNo:phoneNo});
+    this.firestore.collection('messages').add({id:newId,message:message,currtime:this.today, messagePhoneNo:phoneNo});
   }
   updatePolicy(message: any){
     delete message.id;
