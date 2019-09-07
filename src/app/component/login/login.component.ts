@@ -6,7 +6,7 @@ import { Router, ActivatedRoute, Params, Data } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  mobileNumber:any;
   constructor(  private route: ActivatedRoute,
     private router: Router) { }
   loginApp(phno) {

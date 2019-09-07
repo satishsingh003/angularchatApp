@@ -8,8 +8,8 @@ import { Router, ActivatedRoute, Params, Data } from '@angular/router';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  private messagebox: any;
-  private phoneNo: any;
+  messagebox: any;
+  phoneNo: any;
 
   constructor(private MessageServiceService: MessageServiceService, private route: ActivatedRoute,
     private router: Router) { }
