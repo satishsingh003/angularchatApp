@@ -30,7 +30,7 @@
     "@angular/router": "~8.1.0",
     "@angular/service-worker": "~8.1.0",
     "bootstrap": "4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firebase": "^6.4.0",
     "google-libphonenumber": "^3.2.3",
     "intl-tel-input": "^16.0.2",
